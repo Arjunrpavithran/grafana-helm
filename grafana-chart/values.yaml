@@ -1,0 +1,14 @@
+app:
+  name: grafana
+
+image:
+  repository: grafana/grafana-enterprise
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: LoadBalancer
+
+persistence:
+  existingClaim: grafana-pvc
+
